@@ -3,7 +3,11 @@ import IntentionSplitter from "../utils/Intentions";
 
 function Paragraph(props) {
   if (props.intentions.length > 0) {
-    return <IntentionSplitter {...props} />;
+    return (
+      <p>
+        <IntentionSplitter {...props} />
+      </p>
+    );
   } else {
     return <p>{props.text}</p>;
   }
