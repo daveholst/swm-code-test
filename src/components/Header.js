@@ -12,7 +12,8 @@ function Header(props) {
       <span className="byline">{props.byline}, </span>
       <span className="source">{props.source}</span>
       <br></br>
-      <time>{new Date(props.publicationDate).toLocaleString("en-AU", dateOptions)}</time>
+      <time>{new Date(props.publicationDate).toLocaleString("en-AU", dateOptions)} </time>
+      <img src="./assets/plus.svg" alt="plus icon" height="13px"></img>
       <hr />
     </header>
   );

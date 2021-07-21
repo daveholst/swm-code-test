@@ -4,7 +4,7 @@ function PullQuote(props) {
   return (
     <figure className="figure-quote">
       <blockquote>{props.text}</blockquote>
-      <figcaption className="quote-caption">{props.attribution}</figcaption>
+      <figcaption>{props.attribution}</figcaption>
     </figure>
   );
 }

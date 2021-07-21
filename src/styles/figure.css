@@ -3,6 +3,10 @@ figure {
   margin: auto
 }
 
-figure > img {
+.figure-image > img {
   width: 100%
+}
+
+.figure-image > figcaption {
+  text-indent: 25px;
 }

@@ -3,13 +3,13 @@
   padding-left: 20px;
 }
 
-blockquote {
+.figure-quote > blockquote {
   margin: 0 0 10px 0;
   font-size: 1.5rem;
   font-weight:bold;
   font-style: italic;
 }
 
-.quote-caption{
+.figure-quote > figcaption{
   font-size: .9rem;
 }
