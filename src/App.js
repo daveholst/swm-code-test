@@ -1,10 +1,13 @@
 import React from 'react';
-// TODO: Add a comment explaining what this import statement is doing
-import HelloReact from './components/HelloReact';
+import Header from './components/Header';
+import mockRequest from './mockResponse/codetestjson.json'
 
-// TODO: Add a comment explaining the purpose of the App component
+console.log(mockRequest);
 function App() {
-  return <HelloReact />;
+  // Mock get the json from file
+
+
+  return <Header {...mockRequest}/>;
 }
 
 export default App;
