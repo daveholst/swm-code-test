@@ -1,4 +1,4 @@
-import React from "react";
+import Parse from "html-react-parser";
 
 function IntentionSplitter(props) {
   const intentionsArray = props.intentions;
@@ -15,18 +15,16 @@ function IntentionSplitter(props) {
       splitArray.splice(int.index + int.length + additionalCharCount, 0, "</em>");
       additionalCharCount += 1;
     } else {
+      // tag start of string
       splitArray.splice(int.index, 0, "<strong>");
       additionalCharCount += 1;
+      // tag end of strong
       splitArray.splice(int.index + int.length + additionalCharCount, 0, "</strong>");
       additionalCharCount += 1;
     }
   });
-
-  console.log(splitArray);
-  const htmlString = splitArray.join("");
-  // const formattedParaString = formattedParagraphArray[0];
-  // console.log(formattedParaString);
-  return <p dangerouslySetInnerHTML={{ __html: htmlString }}></p>;
+  //! parse seemed a better option that use innerHtmlDangerous! 🙉
+  return Parse(splitArray.join(""));
 }
 
 export default IntentionSplitter;
