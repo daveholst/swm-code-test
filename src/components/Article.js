@@ -5,17 +5,19 @@ import PullQuote from "./PullQuote";
 
 // TODO intentions handler -- formatIntentions
 function Article(props) {
-  console.log(props.blocks);
+  let key = 101;
   const blocksArray = props.blocks.map(function (block) {
     if (block.kind === "text") {
-      return <Paragraph {...block} />;
+      key = key + 1;
+      return <Paragraph key={key} {...block} />;
     } else if (block.kind === "image") {
-      return <Figure {...block} />;
+      key = key + 1;
+      return <Figure key={key} {...block} />;
     } else {
-      return <PullQuote {...block} />;
+      key = key + 1;
+      return <PullQuote key={key} {...block} />;
     }
   });
-  console.log(blocksArray);
   return blocksArray;
 }
 
