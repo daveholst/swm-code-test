@@ -1,0 +1,15 @@
+.figure-quote {
+  border-left: 8px blue solid ;
+  padding-left: 20px;
+}
+
+blockquote {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  font-weight:bold;
+  font-style: italic;
+}
+
+.quote-caption{
+  font-size: .9rem;
+}
